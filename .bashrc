@@ -105,15 +105,16 @@ shopt -s nocaseglob     ## pathname expansion will be treated as case-insensitiv
 
 :h() { vi -c ":silent help $@" -c "only"; }
 apache() { apachectl configtest && /etc/rc.d/httpd stop && sleep 1 && /etc/rc.d/httpd start; }
-aurget() { aurget --asroot "$@"; }
+aurget() { command aurget --asroot "$@"; }
+bin() { git --git-dir=$HOME/.config/bin.git/ --work-tree=$HOME/bin "$@"; }
 burn() { wodim -v dev=/dev/cdrom "$@"; }
-cal() { cal -3; }
+cal() { command cal -3; }
 calc() { awk "BEGIN { printf \"%.3f\n\", $* }"; }
-cp() { cp -prv "$@"; }
+cp() { command cp -prv "$@"; }
 debug() { local script="$1"; shift; bash -vx $(command -v "$script") "$@"; }   ## run a bash script in debug mode
-df() { df -Th "$@"; }
+df() { command df -Th "$@"; }
 dotfiles() { git --git-dir=$HOME/.config/dotfiles.git/ --work-tree=$HOME "$@"; }
-du() { du -ch --exclude=mnt "$@"; }
+du() { command du -ch --exclude=mnt "$@"; }
 du0() { du -ch --exclude=mnt --max-depth=0 "$@"; }
 du1() { du -ch --exclude=mnt --max-depth=1 "$@"; }
 ducks() { du -chs --exclude=mnt * | sort -rh | head -11; }  ## disk hog
@@ -123,17 +124,17 @@ gh() { history | grep "$@"; }
 gkb() { ssh dtsteve "grep $* $HOME/dm/archive/30197/notes" | grep "$@"; }
 gn() { ssh -t dtsteve 'vim + $HOME/dm/archive/30320/notes' 2>/dev/null; }
 gps() { pgrep -lf "$@"; }                                       ## search process list
-grep() { grep -Iis -d skip "$@"; }
-info() { info --vi-keys "$@"; }                                 ## j/k scrolling in info
+grep() { command grep -Iis -d skip "$@"; }
+info() { command info --vi-keys "$@"; }                                 ## j/k scrolling in info
 l() { ls --color=auto -CF --group-directories-first "$@"; }     ## short list
 ll() { ls --color=auto -lAh --group-directories-first "$@"; }   ## long list, hidden files
 lptxt () { lp -o page-bottom=72 -o page-top=72 -o page-left=72 -o page-right=72 "$1"; }
 logcheck() { find /var/log/* -type f -regex '[^0-9]+$' -exec grep -Eni '.*(missing|error|fail|(not|no .+) found|(no |not |in)valid|fatal|conflict|problem|critical|corrupt|warning|wrong|illegal|segfault|fault|caused|unable|\(EE\)|\(WW\))' {} \+; }
-#less() { less -iFX "$@"; }
+#less() { command less -iFX "$@"; }
 less() { vimpager "$@"; }
-makepkg() { makepkg --asroot "$@"; }
-mkdir() { mkdir -p "$@"; }
-mlb() { refresh.sh "/root/bin/mlb.sh -o h TOR"; }
+makepkg() { command makepkg --asroot "$@"; }
+mkdir() { command mkdir -p "$@"; }
+mlb() { refresh.sh "$HOME/bin/mlb.sh -o h TOR"; }
 mond() { mon dvi && mon lvds && mon dvi; }
 monl() { mon lvds && mon dvi && mon lvds; }
 monv() { mon vga && mon lvds && mon vga; }
@@ -143,7 +144,7 @@ mpiso() { mplayer dvd://1 -dvd-device "$@"; }
 mprar() { unrar p -inul $1 | mplayer -; }
 mpsc() { mplayer -cache 8192 http://localhost:8908 -prefer-ipv4; }
 mr() { mairix -f $HOME/.mairix/mairixrc && mairix -f $HOME/.mairix/mairixrc "$@"; }
-mv() { mv -v "$@"; }
+mv() { command mv -v "$@"; }
 myip() { curl -Ls http://tnx.nl/ip; }       ## lookup internet IP
 ng() { nagcon -a -i 5 -f /var/nagios/status.dat; }
 pacf() { find /boot /etc -name '*.pac*' 2>/dev/null; }
@@ -153,7 +154,7 @@ pacu() { pacsearch -S && pacsearch "$@"; }
 pb() { socksify pianobar; }
 pg() { ping -c 3 google.com; }
 gpw() { gpg -d $HOME/doc/file.asc | grep "$@"; }
-rm() { rm -r "$@"; }
+rm() { command rm -r "$@"; }
 s() { pacman-color -Ss "$1" ; aurget --asroot -Ss "$1"; }
 sanitize() { for i in "$@" ; do j=$(tr '[[:upper:]]' '[[:lower:]]' <<< "$i" | tr ' ' _) && mv "$i" "$j" ; done; }
 sc() { sp-sc-auth "$@" 3908 8908; }
@@ -244,5 +245,5 @@ archivef() {
 
 def() { word=$(tr ' ' _ <<< "$*")
         w3m -dump "http://www.google.ca/search?q=define%20$word" | awk '/^     1./,/^        More info >>/'
-        mplayer "http://ssl.gstatic.com/dictionary/static/sounds/de/0/$word.mp3" &>/dev/null; }
-
+        mplayer "http://ssl.gstatic.com/dictionary/static/sounds/de/0/$word.mp3" &>/dev/null
+}
