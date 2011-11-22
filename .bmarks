@@ -1,0 +1,123 @@
+bmark -keyword=411 -title='Canada411' http://canada411.yellowpages.ca/searchBusiness.do
+bmark -keyword=af -title='Arch Linux Forums Search' http://www.google.com/search?hl=en&q=allintitle%3A&q=site%3Abbs.archlinux.org&q=%s
+bmark -keyword=aw -title='ArchWiki :: Main Page - ArchWiki' http://wiki.archlinux.org/index.php/Special:Search?go=Go&search=%s
+bmark -keyword=awk -title='The AWK Manual' http://people.cs.uu.nl/piet/docs/nawk/nawk_toc.html
+bmark -keyword=awk1 -title='HANDY ONE-LINE SCRIPTS FOR AWK' http://www.pement.org/awk/awk1line.txt
+bmark -keyword=atlas -title='Lonely Planet: the world&amp;#39;s best guidebooks, travel advice and information' http://www.lonelyplanet.com/
+bmark -keyword=bashfaq -title='BashFAQ' http://wooledge.org:8000/BashFAQ
+bmark -keyword=bashguide -title='BashGuide' http://wooledge.org:8000/BashGuide
+bmark -keyword=bash -title='Advanced Bash-Scripting Guide' http://tldp.org/LDP/abs/html/
+bmark -keyword=bashb -title='Bash Manual' http://www.gnu.org/software/bash/manual/bashref.html
+bmark -keyword=bashd -title='Bash documentation' http://www.google.com/search?hl=en&newwindow=1&as_epq=&as_oq=&as_eq=&num=10&lr=&as_filetype=&ft=i&as_qdr=all&as_rights=&as_occt=any&cr=&as_nlo=&as_nhi=&safe=off&as_sitesearch=gnu.org&as_q=bash+%s
+bmark -keyword=bashg -title='Google Search Bash' http://www.google.com/search?hl=en&newwindow=1&as_epq=&as_oq=&as_eq=&num=10&lr=&as_filetype=&ft=i&as_qdr=all&as_rights=&as_occt=any&cr=&as_nlo=&as_nhi=&safe=off&as_q=bash+%s
+bmark -keyword=bashm -title='Bash mailing list' http://www.mail-archive.com/search?l=bug-bash%40gnu.org&q=%s
+bmark -keyword=bashs -title='Stack Overflow Bash' http://www.google.ca/search?hl=en&safe=off&client=firefox-a&rls=org.mozilla:en-US:official&hs=EzU&newwindow=1&tbs=qdr:y&q=site:stackoverflow.com+bash+%s
+bmark -keyword=bashsheet -title='http://mywiki.wooledge.org/BashSheet'
+bmark -keyword=bashw -title='Gregs Bash Wiki' http://www.google.com/search?hl=en&newwindow=1&as_epq=&as_oq=&as_eq=&num=10&lr=&as_filetype=&ft=i&as_qdr=all&as_rights=&as_occt=any&cr=&as_nlo=&as_nhi=&safe=off&as_sitesearch=mywiki.wooledge.org&as_q=%s
+bmark -keyword=bball -title='Basketball Reference' http://www.basketball-reference.com/player_search.cgi?search=%s
+bmark -keyword=bref -title='Baseball Reference' http://www.baseball-reference.com/player_search.cgi?search=%s
+bmark -keyword=bithd -title='BIT-HDTV' http://www.bit-hdtv.com/torrents.php?search=%s
+bmark -keyword=cbs -title='CBSSports.com' http://www.cbssports.com/
+bmark -keyword=cssb -title='Cascading Style Sheets, level 2 revision 1' http://www.w3.org/TR/CSS21/
+bmark -keyword=cssd -title='CSS documentation' http://reference.sitepoint.com/search?q=%s
+bmark -keyword=cssg -title='Google Search CSS' http://www.google.com/search?hl=en&newwindow=1&as_epq=&as_oq=&as_eq=&num=10&lr=&as_filetype=&ft=i&as_qdr=all&as_rights=&as_occt=any&cr=&as_nlo=&as_nhi=&safe=off&as_q=css+%s
+bmark -keyword=cssm -title='css mailing list' http://www.mail-archive.com/search?l=css-d%40lists.css-discuss.org&q=%s
+bmark -keyword=csss -title='Stack Overflow CSS' http://www.google.ca/search?hl=en&safe=off&client=firefox-a&rls=org.mozilla:en-US:official&hs=EzU&newwindow=1&tbs=qdr:y&q=site:stackoverflow.com+css+%s
+bmark -keyword=demonoid -title='Demonoid.com' http://www.demonoid.com/files/?category=0&subcategory=All&quality=All&seeded=0&external=2&query=%s
+bmark -keyword=epg -title='epguides.com' http://www.google.com/search?hl=en&q=allintitle%3A&q=site%3Aepguides.com&q=%s
+bmark -keyword=e -title='ebay' http://search.ebay.com//search/search.dll?from=R40&satitle=%s
+bmark -keyword=escape -title='ANSI VT100 Escape' http://www.termsys.demon.co.uk/vtansi.htm
+bmark -keyword=ew -title='EasyWeb' https://easyweb.tdcanadatrust.com/
+bmark -keyword=ext -title='File search by extension' http://www.google.com/search?hl=en&newwindow=1&as_epq=&as_oq=&as_eq=&num=10&lr=&as_filetype=&ft=i&as_qdr=all&as_rights=&as_occt=any&cr=&as_nlo=&as_nhi=&safe=off&as_q=-inurl%3Ahtm+-inurl%3Ahtml+intitle%3A%22index+of%22+%22Last+modified%22+%s
+bmark -keyword=fdm -title='fdm' http://fdm.sourceforge.net/
+bmark -keyword=food -title='http://www.nutritiondata.com/foods-%s000000000000000000000.html' http://www.nutritiondata.com/foods-%s000000000000000000000.html
+bmark -keyword=fref -title='Football Reference' http://www.pro-football-reference.com/player_search.cgi?search=%s
+bmark -keyword=g -title='Google Quicksearch' http://www.google.ca/search?ie=utf-8&oe=utf-8&aq=t&rls=org.mozilla:en-US:official&client=firefox-a&as_qdr=y&q=%s
+bmark -keyword=git -title='git-user mailing list' http://search.gmane.org/search.php?group=gmane.comp.version-control.git.user&query=%s
+bmark -keyword=gmane -title='Gmane Search' http://search.gmane.org/?author=&group=&sort=date&query=%s
+bmark -keyword=groups -title='Google Groups Search' http://groups.google.com/groups?hl=en&lr=&sa=N&tab=wg&q=%s
+bmark -keyword=hn -title='Hacker News Google Search' http://www.google.com/search?hl=en&newwindow=1&as_epq=&as_oq=&as_eq=&num=10&lr=&as_filetype=&ft=i&as_qdr=all&as_rights=&as_occt=any&cr=&as_nlo=&as_nhi=&safe=off&as_sitesearch=news.ycombinator.com&as_q=%s
+bmark -keyword=hockeydb -title='Hockey Db' http://www.hockeydb.com/ihdb/stats/findplayer.php3?lname=%s
+bmark -keyword=hp -title='Hockey Pool' http://thehockeypool.com/cgiNew/DailyStatsPage.cgi?Pool=OldSchool
+bmark -keyword=href -title='Hockey Reference' http://www.hockey-reference.com/player_search.cgi?search=%s
+bmark -keyword=htmb -title='HTML 4.01 Specification' http://www.w3.org/TR/html401/
+bmark -keyword=htmd -title='HTML documentation' http://www.google.com/search?hl=en&newwindow=1&as_epq=&as_oq=&as_eq=&num=10&lr=&as_filetype=&ft=i&as_qdr=all&as_rights=&as_occt=any&cr=&as_nlo=&as_nhi=&safe=off&as_sitesearch=w3schools.com&as_q=html+%s
+bmark -keyword=htmg -title='Google Search HTML' http://www.google.com/search?hl=en&newwindow=1&as_epq=&as_oq=&as_eq=&num=10&lr=&as_filetype=&ft=i&as_qdr=all&as_rights=&as_occt=any&cr=&as_nlo=&as_nhi=&safe=off&as_q=html+%s
+bmark -keyword=htmm -title='HTML mailing list' http://search.gmane.org/?group=gmane.comp.web.html.general&query=%s
+bmark -keyword=htms -title='Stack Overflow HTML' http://www.google.ca/search?hl=en&safe=off&client=firefox-a&rls=org.mozilla:en-US:official&hs=EzU&newwindow=1&tbs=qdr:y&q=site:stackoverflow.com+htm+%s
+bmark -keyword=image -title='Google Image Search' http://images.google.ca/images?oe=utf-8&rls=org.mozilla:en-US:official&client=firefox-a&num=1&ie=UTF-8&sa=N&hl=en&tab=wi&safe=off&q=%s
+bmark -keyword=i -title='imdb' http://www.imdb.com/find?s=all&q=%s
+bmark -keyword=jsf -title='John Stone Fitness' http://johnstonefitness.com/
+bmark -keyword=m -title='Google Maps' http://maps.google.com/maps?&q=%s
+bmark -keyword=sof -title='Stack Overflow' http://www.google.ca/search?hl=en&safe=off&client=firefox-a&rls=org.mozilla:en-US:official&hs=EzU&newwindow=1&tbs=qdr:y&q=site:stackoverflow.com+%s
+bmark -keyword=st -title='Movie Showtimes - Google Search' http://www.google.com/movies?hl=en&near=kitchener+on&dq=showtimes+kitchener,+on&sa=X&oi=showtimes&ct=title&cd=1
+bmark -keyword=ipcalc -title='IP Calculator / IP Subnetting' http://jodies.de/ipcalc?host=%s&mask1=24&mask2=
+bmark -keyword=jqd -title='jQuery documentation' http://docs.jquery.com/Special:Search?ns0=1&go=&search=%s
+bmark -keyword=jqg -title='Google Search jQuery' http://www.google.com/search?hl=en&newwindow=1&as_epq=&as_oq=&as_eq=&num=10&lr=&as_filetype=&ft=i&as_qdr=all&as_rights=&as_occt=any&cr=&as_nlo=&as_nhi=&safe=off&as_q=jquery+%s
+bmark -keyword=jqm -title='jquery mailing list' http://www.mail-archive.com/search?l=jquery-en%40googlegroups.com&q=%s
+bmark -keyword=jqs -title='Stack Overflow Jquery' http://www.google.ca/search?hl=en&safe=off&client=firefox-a&rls=org.mozilla:en-US:official&hs=EzU&newwindow=1&tbs=qdr:y&q=site:stackoverflow.com+jquery+%s
+bmark -keyword=jsb -title='Javascript Pocket Reference' http://my.safaribooksonline.com/0-596-00411-7
+bmark -keyword=jsd -title='Javascript documentation' http://www.google.com/search?hl=en&newwindow=1&as_epq=&as_oq=&as_eq=&num=10&lr=&as_filetype=&ft=i&as_qdr=all&as_rights=&as_occt=any&cr=&as_nlo=&as_nhi=&safe=off&as_sitesearch=w3schools.com&as_q=javascript+%s
+bmark -keyword=jsg -title='Google Search Javascript' http://www.google.com/search?hl=en&newwindow=1&as_epq=&as_oq=&as_eq=&num=10&lr=&as_filetype=&ft=i&as_qdr=all&as_rights=&as_occt=any&cr=&as_nlo=&as_nhi=&safe=off&as_q=javascript+%s
+bmark -keyword=jsm -title='Javascript mailing list' http://search.gmane.org/?group=gmane.comp.lang.javascript.ecmascript4.general&query=%s
+bmark -keyword=jss -title='Stack Overflow Javascript' http://www.google.ca/search?hl=en&safe=off&client=firefox-a&rls=org.mozilla:en-US:official&hs=EzU&newwindow=1&tbs=qdr:y&q=site:stackoverflow.com+javascript+%s
+bmark -keyword=magento -title='Magento' http://www.magentocommerce.com/
+bmark -keyword=magentob -title='Magento Book' http://www.google.ca/search?hl=en&newwindow=1&as_epq=&as_oq=&as_eq=&num=10&lr=&as_filetype=&ft=i&as_qdr=all&as_rights=&as_occt=any&cr=&as_nlo=&as_nhi=&safe=off&as_sitesearch=magentocommerce.com/knowledge-base&as_q=%s
+bmark -keyword=magentod -title='Magento documentation' http://www.google.ca/search?hl=en&newwindow=1&as_epq=&as_oq=&as_eq=&num=10&lr=&as_filetype=&ft=i&as_qdr=all&as_rights=&as_occt=any&cr=&as_nlo=&as_nhi=&safe=off&as_sitesearch=magentocommerce.com&as_q=%s
+bmark -keyword=magentog -title='Magento Google Search' http://www.google.ca/search?hl=en&newwindow=1&as_epq=&as_oq=&as_eq=&num=10&lr=&as_filetype=&ft=i&as_qdr=all&as_rights=&as_occt=any&cr=&as_nlo=&as_nhi=&safe=off&as_q=magento+%s
+bmark -keyword=magentom -title='Magento mailing list' http://www.google.ca/search?hl=en&newwindow=1&as_epq=&as_oq=&as_eq=&num=10&lr=&as_filetype=&ft=i&as_qdr=all&as_rights=&as_occt=any&cr=&as_nlo=&as_nhi=&safe=off&as_sitesearch=magentocommerce.com/boards&as_q=%s
+bmark -keyword=magentor -title='Magento Reference' http://docs.magentocommerce.com/
+bmark -keyword=magentos -title='Magento Stack Overflow' http://www.google.ca/search?hl=en&newwindow=1&as_epq=&as_oq=&as_eq=&num=10&lr=&as_filetype=&ft=i&as_qdr=all&as_rights=&as_occt=any&cr=&as_nlo=&as_nhi=&safe=off&as_sitesearch=stackoverflow.com&as_q=magento+%s
+bmark -keyword=magentow -title='Magento Wiki' http://www.google.ca/search?hl=en&newwindow=1&as_epq=&as_oq=&as_eq=&num=10&lr=&as_filetype=&ft=i&as_qdr=all&as_rights=&as_occt=any&cr=&as_nlo=&as_nhi=&safe=off&as_sitesearch=magentocommerce.com/wiki&as_q=%s
+bmark -keyword=magentoadmin -title='Magento' http://www.magento-dev.com/index.php/admin
+bmark -keyword=magentodev -title='Magento' http://www.magento-dev.com/
+bmark -keyword=man -title='Man Pages Online' http://linuxcommand.org/man_pages/%s1.html
+bmark -keyword=mkd -title='Gmane Search -- markdown' http://search.gmane.org/?group=gmane.text.markdown.general&query=%s
+bmark -keyword=mlb -title='CBS.SportsLine.com - MLB Home' http://www.sportsline.com/mlb
+bmark -keyword=mma -title='MMA Major Events Schedule' http://ca.sports.yahoo.com/mma/news?slug=ys-mmasked112108&prov=yhoo&type=lgns
+bmark -keyword=muttb -title='Mutt Book' http://dev.mutt.org/doc/manual.html
+bmark -keyword=muttd -title='Mutt documentation' http://www.google.com/search?hl=en&newwindow=1&as_epq=&as_oq=&as_eq=&num=10&lr=&as_filetype=&ft=i&as_qdr=all&as_rights=&as_occt=any&cr=&as_nlo=&as_nhi=&safe=off&as_sitesearch=mutt.org&as_q=mutt+%s
+bmark -keyword=muttg -title='Google Search Mutt' http://www.google.com/search?hl=en&newwindow=1&as_epq=&as_oq=&as_eq=&num=10&lr=&as_filetype=&ft=i&as_qdr=all&as_rights=&as_occt=any&cr=&as_nlo=&as_nhi=&safe=off&as_q=mutt+%s
+bmark -keyword=muttm -title='Mutt mailing list' http://www.mail-archive.com/search?l=mutt-users%40mutt.org&q=%s
+bmark -keyword=mutts -title='Stack Overflow Mutt' http://www.google.ca/search?hl=en&safe=off&client=firefox-a&rls=org.mozilla:en-US:official&hs=EzU&newwindow=1&tbs=qdr:y&q=site:stackoverflow.com+mutt+%s
+bmark -keyword=muttd -title='Mutt documentation' http://www.google.com/search?hl=en&newwindow=1&as_epq=&as_oq=&as_eq=&num=10&lr=&as_filetype=&ft=i&as_qdr=all&as_rights=&as_occt=any&cr=&as_nlo=&as_nhi=&safe=off&as_sitesearch=wiki.mutt.org&as_q=mutt+%s
+bmark -keyword=mysql -title='MySQL Search' http://search.mysql.com/search?q=%s+syntax&site=refman-51
+bmark -keyword=nba -title='CBS.SportsLine.com - NBA Home' http://www.sportsline.com/nba
+bmark -keyword=nfl -title='CBS.SportsLine.com - NFL Home' http://www.sportsline.com/nfl
+bmark -keyword=nhl -title='CBS.SportsLine.com - NHL Home' http://www.sportsline.com/nhl
+bmark -keyword=pb -title='pastebin' https://gist.github.com
+bmark -keyword=pirate -title='The Pirate Bay' http://thepiratebay.org/search.php?q=%s
+bmark -keyword=posix -title='posix' http://pubs.opengroup.org/onlinepubs/9699919799/utilities/contents.html
+bmark -keyword=pypi -title='Python package index' http://pypi.python.org/pypi?%3Aaction=search&term=%s&submit=search
+bmark -keyword=pyb -title='Dive Into Python' http://www.google.com/search?hl=en&newwindow=1&as_epq=&as_oq=&as_eq=&num=10&lr=&as_filetype=&ft=i&as_qdr=all&as_rights=&as_occt=any&cr=&as_nlo=&as_nhi=&safe=off&as_sitesearch=diveintopython.org&as_q=%s
+bmark -keyword=pyd -title='Python v2.6.4 documentation' http://docs.python.org/search.html?q=%s
+bmark -keyword=pyg -title='Google Search Python' http://www.google.com/search?hl=en&newwindow=1&as_epq=&as_oq=&as_eq=&num=10&lr=&as_filetype=&ft=i&as_qdr=all&as_rights=&as_occt=any&cr=&as_nlo=&as_nhi=&safe=off&as_q=python+%s
+bmark -keyword=pym -title='python mailing list' http://www.mail-archive.com/search?l=python-list%40python.org&q=%s
+bmark -keyword=pys -title='Stack Overflow Python' http://www.google.ca/search?hl=en&safe=off&client=firefox-a&rls=org.mozilla:en-US:official&hs=EzU&newwindow=1&tbs=qdr:y&q=site:stackoverflow.com+python+%s
+bmark -keyword=radar -title='Intellicast' http://www.intellicast.com/National/Radar/Current.aspx?animate=true
+bmark -keyword=regexp -title='Regular Expressions' http://www.zytrax.com/tech/web/regex.htm#special
+bmark -keyword=scrape -title='scrapetorrent' http://scrapetorrent.com/Search/index.php?search=%s
+bmark -keyword=stream -title='streams' http://www.firstrowsports.tv/sport/ice-hockey.html
+bmark -keyword=tsn -title='TSN' http://tsn.ca/
+bmark -keyword=urxvt -title='http://search.gmane.org/search.php?group=gmane.comp.terminal-emulators.rxvt-unicode.general&amp;amp;query=%s' http://search.gmane.org/search.php?group=gmane.comp.terminal-emulators.rxvt-unicode.general&query=%s
+bmark -keyword=vimb -title='vim book' http://www.truth.sk/vim/vimbook-OPL.pdf
+bmark -keyword=vimd -title='Google Search vim' http://www.google.com/search?hl=en&newwindow=1&as_epq=&as_oq=&as_eq=&num=10&lr=&as_filetype=&ft=i&as_qdr=all&as_rights=&as_occt=any&cr=&as_nlo=&as_nhi=&safe=off&as_sitesearch=vimdoc.sourceforge.net&as_q=%s
+bmark -keyword=vimg -title='Google Search vim' http://www.google.com/search?hl=en&newwindow=1&as_epq=&as_oq=&as_eq=&num=10&lr=&as_filetype=&ft=i&as_qdr=all&as_rights=&as_occt=any&cr=&as_nlo=&as_nhi=&safe=off&as_q=vim+%s
+bmark -keyword=vimm -title='Vim Mailing List' http://www.mail-archive.com/search?l=vim_use%40googlegroups.com&q=%s
+bmark -keyword=vims -title='Stack Overflow vim' http://www.google.ca/search?hl=en&safe=off&client=firefox-a&rls=org.mozilla:en-US:official&hs=EzU&newwindow=1&tbs=qdr:y&q=site:stackoverflow.com+vim+%s
+bmark -keyword=vimw -title='Vim Wiki' http://vim.wikia.com/wiki/Special:Search?go=1&search=%s
+bmark -keyword=w -title='Wikipedia' http://en.wikipedia.org/wiki/Special:Search?search=%s&go=Go
+bmark -keyword=web2b -title='web2py Book' http://www.web2py.com/examples/default/docs
+bmark -keyword=web2d -title='web2py documentation' http://www.google.com/search?hl=en&newwindow=1&as_epq=&as_oq=&as_eq=&num=10&lr=&as_filetype=&ft=i&as_qdr=all&as_rights=&as_occt=any&cr=&as_nlo=&as_nhi=&safe=off&as_sitesearch=web2py.com&as_q=web2py+%s
+bmark -keyword=web2g -title='Google Search web2py' http://www.google.com/search?hl=en&newwindow=1&as_epq=&as_oq=&as_eq=&num=10&lr=&as_filetype=&ft=i&as_qdr=all&as_rights=&as_occt=any&cr=&as_nlo=&as_nhi=&safe=off&as_q=web2py+%s
+bmark -keyword=web2m -title='web2py mailing list' http://www.mail-archive.com/search?q=%s&l=web2py%40googlegroups.com
+bmark -keyword=web2s -title='Stack Overflow web2py' http://www.google.ca/search?hl=en&safe=off&client=firefox-a&rls=org.mozilla:en-US:official&hs=EzU&newwindow=1&tbs=qdr:y&q=site:stackoverflow.com+web2py+%s
+bmark -keyword=weeb -title='weechat Book' http://www.weechat.org/files/doc/stable/weechat_user.en.html
+bmark -keyword=weed -title='weechat documentation' http://www.google.com/search?hl=en&newwindow=1&as_epq=&as_oq=&as_eq=&num=10&lr=&as_filetype=&ft=i&as_qdr=all&as_rights=&as_occt=any&cr=&as_nlo=&as_nhi=&safe=off&as_sitesearch=weechat.org&as_q=%s
+bmark -keyword=weeg -title='Google Search weechat' http://www.google.com/search?hl=en&newwindow=1&as_epq=&as_oq=&as_eq=&num=10&lr=&as_filetype=&ft=i&as_qdr=all&as_rights=&as_occt=any&cr=&as_nlo=&as_nhi=&safe=off&as_q=weechat+%s
+bmark -keyword=weem -title='weechat mailing list' http://www.mail-archive.com/search?l=weechat-dev%40nongnu.org&q=%s
+bmark -keyword=wees -title='Stack Overflow weechat' http://www.google.ca/search?hl=en&safe=off&client=firefox-a&rls=org.mozilla:en-US:official&hs=EzU&newwindow=1&tbs=qdr:y&q=site:superuser.com+weechat+%s
+bmark -keyword=yt -title='YouTube Search' http://www.youtube.com/results?uploaded=m&search_type=videos&as=1&search_hl=en&search_sort=video_date_uploaded&search_query=%s
+bmark -title='Graphical vi-vim Cheat Sheet and Tutorial' http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html
+bmark -title='LinuxCommand.org: Learning the shell.' http://gd.tuwien.ac.at/linuxcommand.org/learning_the_shell.php
+bmark -title='VIM Quick Reference Card' http://tnerual.eriogerg.free.fr/vimqrc.html

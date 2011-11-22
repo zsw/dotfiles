@@ -1,0 +1,4 @@
+new-session -d -s mail 'mutt'
+set-option status off
+set set-titles-string "mail"
+attach-session -t mail

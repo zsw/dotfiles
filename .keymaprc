@@ -1,0 +1,6 @@
+## this file must be invoked by a shellscript on init (eg /etc/rc.local)
+## it is to modify the keymap for terms without X
+
+## swap the caps lock key with escape
+keycode 1 = Caps_Lock
+keycode 58 = Escape

@@ -1,0 +1,56 @@
+# white
+# black
+# green
+# magenta
+# blue
+# cyan
+# yellow
+# red
+# default
+# colorx
+
+color attachment    brightmagenta   default
+color error         brightwhite     red         ## errors yell at you in red
+color hdrdefault    color240        default     ## headers
+color indicator     color231        color236    ## currently selected message
+color message       blue            default     ## informational messages, not mail
+color normal        color188        black       ## plain text
+color quoted        green           default     ## quoted text
+color search        brightgreen     default     ## hilite search patterns in the pager
+color signature     color8          default     ## signature (after "-- ") is red
+color status        blue            black       ## status bar is yellow *on blue*
+color tilde         blue            default     ## ~'s after message body
+color tree          brightblue      default     ## thread tree in index menu is magenta
+color underline     yellow          default
+color header        blue            default     ^(From|Subject):            ## Important headers
+color body          brightblue      default     "(ftp|http)://[^ ]+"        ## URLs
+color body          brightblue      default     "(^|<| )(http|https|ftp|file)://[^ ]+( |>|$)" ## URLs
+color body          brightblue      default     "[[:alpha:]]\+://[^ ]*"     ## URLs
+color body          brightblue      default     [-a-z_0-9.]+@[-a-z_0-9.]+   ## email addresses
+color body          brightyellow    default     "(^| )+(:[-^]?[][)(><}{|/DP])[\.\ $]+"  ## smileys
+
+color sidebar_new   brightyellow    default
+
+##  Coloring quoted text - coloring the first 7 levels:
+color quoted        white           default
+color quoted1       blue            default
+color quoted2       green           default
+color quoted3       red             default
+color quoted4       white           default
+color quoted5       blue            default
+color quoted6       green           default
+color quoted7       red             default
+
+## Colorize smileys:  :-)  ;-)  :-/  :-(
+#color body          yellow          default     "[;:]-[)/(|]"
+#color body          yellow          default     "[;:][)/(|]"
+
+#color index         color193        color233    ~A
+color index         white           black       ~P  ## sent messages
+color index         magenta         default     ~F  ## flagged messages
+color index         brightyellow    default     ~N  ## new messages
+color index         yellow          default     ~O  ## old messages
+color index         magenta         default     ~T  ## tagged messages
+color index         red             default     ~D  ## deleted messages
+
+# vim: ft=muttrc

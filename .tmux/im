@@ -1,0 +1,4 @@
+new-session -d -s im 'weechat-curses'
+set-option status off
+set set-titles-string "im"
+attach-session -t im

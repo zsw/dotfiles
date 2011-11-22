@@ -1,0 +1,189 @@
+"##### General #####
+"#
+"# Settings related to the browser environment
+"#
+"#######################
+
+set activate=addons,bookmarks,diverted,downloads,extoptions,help,homepage,quickmark,tabopen,paste
+set complete=sflb
+set defsearch=g
+set editor='urxvt -title sp -e vim -f'
+set findcase=ignore
+set followhints=1
+set guioptions=Cs
+set hintinputs=label,value,name
+set hinttimeout=0
+set hlfind
+set incfind
+set insertmode
+"set mapleader=\
+set newtab=all
+"set showmode=!^normal$
+set showstatuslinks=command
+set showtabline=never
+set titlestring=Firefox
+set verbose=0
+set visualbell
+set wildcase=.?:smart
+"# ignore file extensions (JK i'm not sure this is working)
+" *.o           : object files
+" *.pyc         : python compiled files
+" *.swp *.swo   : vim swap files
+set wildignore="\.o$","\.pyc$","\.sw[a-z]$"
+set wildmode=list:longest,full
+
+" JK I think there may be a bug: getting 'document is not defined' error
+" set hinttags+='div:[class=flash]'
+
+" mail-archive.com surrounds < and > with whitespace
+set nextpattern+='^\s>\s$'
+set previouspattern+='^\s<\s$'
+
+colorscheme steve
+
+"##### Colours #####
+"#
+"# Settings related to syntax and colours
+"#
+"#######################
+
+" Normal      fg=#f6f3e8 244  bg=#242424 234
+" CursorLine  fg=#ffffaf 229  bg=#363636 236
+
+hi Bell             color:#DADADA;  background:#121212
+hi CmdLine          color:#DADADA;  background:#121212
+hi CompItem         color:#DADADA;  background:#121212
+hi CompItem[selected] color:#DADADA; background:#303030
+hi CompMsg          color:#DADADA;  background:#121212
+hi CompTitle        color:#DADADA;  background:#121212
+hi CompTitleSep     height: 1px;    background:#303030
+hi ErrorMsg         color:#121212;  background:#CC896D
+"hi FontProportional font-size: 8pt; font-family: "DejaVu Sans", Verdana, sans-serif !important;
+hi GradientLeft     background-color:#303030
+hi GradientRight    background-color:#303030
+hi Hint             color:#DADADA;  background:#9E5641; z-index:5000; font:normal 8pt sans-serif; padding:0px 1px 0px 1px;position:absolute
+hi HintActive       color:#121212;  background:#004586
+hi Hint[active]     color:#121212;  background:#DADADA
+hi HintElem         color:#121212;  background:#CAAF2B
+hi Indicator        color:#DADADA;  background:#121212
+hi InfoMsg          color:#DADADA;  background:#121212
+hi LineNr           color:#121212;  background:#9E5641
+hi ModeMsg          color:#DADADA;  background:#121212
+hi MoreMsg          color:#DADADA;  background:#121212
+hi Normal           color:#DADADA;  background:#121212; font-size: 10pt; font-family: "DejaVu Sans"
+hi Question         color:#DADADA;  background:#121212
+hi Search           color:#121212;  background:#6C7E55
+hi StatusLine       color:#CAAF2B;  background:#303030; font-size: 9pt; font-family: "DejaVu Sans"
+hi StatusLineExtended color:#121212; background:#6C7E55
+hi StatusLineNormal color:#CAAF2B;  background:#303030; font-size: 9pt; font-family: "DejaVu Sans"
+hi StatusLineSecure color:#121212;  background:#6C7E55
+hi String           color:#121212;  background:#956D9D
+hi TabClose         color:#DADADA;  background:#303030
+hi TabIcon          color:#DADADA;  background:#303030
+hi TabIconNumber    color:#DADADA;  background:#303030
+hi TabNumber        color:#DADADA;  background:#303030
+hi TabText          color:#DADADA;  background:#303030
+hi Title            color:#DADADA;  background:#121212
+hi WarningMsg       color:#121212;  background:#9E5641
+
+" This is a list of all components that can be color controlled for reference
+"Bell               Vimperator's visual bell
+"Boolean            A JavaScript Boolean object
+"CmdLine            The command line
+"CmdOutput
+"CompDesc           The description column of the completion list
+"CompGroup
+"CompIcon           The favicon of a completion row
+"CompItem           A row of completion list
+"CompItem[selected] A selected row of completion list
+"CompLess           The indicator shown when completions may be scrolled up
+"CompLess::after    The character of indicator shown when completions may be scrolled up
+"CompMore           The indicator shown when completions may be scrolled down
+"CompMore::after    The character of indicator shown when completions may be scrolled down
+"CompMsg
+"CompResult         The result column of the completion list
+"CompTitle          Completion row titles
+"ErrorMsg           Error messages
+"Filter             The matching text in a completion list
+"FrameIndicator     The indicator shown when a new frame is selected
+"Function           A JavaScript Function object
+"Gradient
+"GradientLeft
+"GradientRight
+"Hint               A hint indicator. See :help hints
+"HintActive         The hint element of link which will be followed by <Enter>
+"HintElem           The hintable element
+"HintImage          The indicator which floats above hinted images
+"Indicator
+"InfoMsg            Information messages
+"Keyword            A bookmark keyword for a URL
+"LineNr             The line number of an error
+"Message
+"ModeMsg            The mode indicator in the command line
+"MoreMsg            The indicator that there is more text to view
+"NonText
+"Normal             Normal text in the command line
+"Null               A JavaScript Null object
+"Number             A JavaScript Number object
+"Object             A JavaScript Object
+"Preview
+"Question           A prompt for a decision
+"Search             Highlighted search results in a web page
+"StatusLine         The status bar
+"StatusLineBroken   The status bar for a broken web page
+"StatusLineSecure   The status bar for a secure web page
+"StatusLineExtended The status bar for a secure web page with an Extended Validation(EV) certificate
+"String             A JavaScript String object
+"TabClose           The close button of a browser tab
+"TabIcon            The icon of a browser tab
+"TabIconNumber      The number of a browser tab, over its icon
+"TabNumber          The number of a browser tab, next to its icon
+"TabText            The text of a browser tab
+"Tag                A bookmark tag for a URL
+"Title              The title of a listing, including :pageinfo, :jumps
+"URL                A URL
+"WarningMsg         A warning messageG
+
+"##### Mappings #####
+"#
+"# Keyboard shortcut mappings
+"#
+"#######################
+
+" Set the leader character (by default it's a backslash "\" )
+
+" Open help in a new window so current window is not clobbered.
+map <F1>   :tabopen dactyl://help/intro<CR>
+
+noremap -b k 2k
+noremap -b j 2j
+noremap -b J 20j
+noremap -b K 20k
+noremap -b W ;w
+
+
+"##### Bin #####
+"#
+"# Settings I don't use but may be useful some day
+"#
+"#######################
+
+
+" restart Vimperator
+"map <C-r>   :restart<CR>
+
+" select next/previous tab
+"map <Right> gt
+"map <Left>  gT
+"map <C-l>   gt
+"map <C-h>   gT
+
+" move current tab left/right
+"map <S-Right> :tabmove! +1<CR>
+"map <S-Left>  :tabmove! -1<CR>
+"map <C-L>     :tabmove! +1<CR>
+"map <C-H>     :tabmove! -1<CR>
+
+" echo ".vimperatorrc sourced"
+
+" vim: ft=vimperator sw=4 sts=4

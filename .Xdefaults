@@ -1,0 +1,52 @@
+#include ".config/xcolors"
+
+urxvt*font:             -*-gohufont-medium-*-*-*-14-*-*-*-*-*-*-*
+urxvt*boldFont:         -*-gohufont-medium-*-*-*-14-*-*-*-*-*-*-*
+urxvt*background:       #121212
+urxvt*colorURL:         #5F87AF
+urxvt*cutchars:         "()*,<>[]{}|'.
+urxvt*depth:            24
+urxvt*fading:           70
+urxvt*foreground:       #DADADA
+urxvt*geometry:         100x37
+urxvt*iconName:         rxvt
+urxvt*internalBorder:   0
+urxvt*jumpScroll:       true
+urxvt*keysym.4-Escape:  perl:keyboard-select:activate
+urxvt*keysym.4-h:       perl:url-select:select_next
+urxvt*matcher.button:   1
+urxvt*perl-ext-common:  default,matcher,selection,url-select,keyboard-select
+urxvt*perl-lib:         /usr/lib/urxvt/perl/
+urxvt*print-pipe:       cat > $(echo urxvt.dump.`date +'%Y%M%d%H%m%S'`)
+urxvt*saveLines:        16283
+urxvt*scrollBar:        false
+urxvt*scrollTtyKeypress:true
+urxvt*scrollTtyOutput:  false
+urxvt*scrollWithBuffer: false
+urxvt*scrollstyle:      plain
+urxvt*termName:         rxvt-256color
+urxvt*tintColor:        #121212
+urxvt*underlineURLs:    true
+urxvt*urlLauncher:      /usr/bin/firefox
+urxvt*utmpInhibit:      true
+
+xterm*dynamicColors:    true
+xterm*eightBitInput:    true
+xterm*faceName:         Dejavu Sans Mono:pixelsize=14
+xterm*jumpScroll:       true
+xterm*loginShell:       true
+xterm*multiScroll:      true
+xterm*saveLines:        32767
+xterm*scrollBar:        false
+xterm*scrollTtyKeypress:true
+xterm*scrollTtyOutput:  false
+xterm*toolBar:          false
+xterm*utf8:             2
+
+xpdf*Background:        #121212
+xpdf*Foreground:        #DADADA
+xpdf*antialias:         yes
+xpdf*enableFreetype:    yes
+xpdf*initialZoom:       width
+xpdf*matteColor:        #DADADA
+xpdf*paperColor:        #585858

@@ -1,0 +1,22 @@
+antialias           yes
+continuousView      yes
+enableFreeType      yes
+psFile              "| lpr -Php2605"
+urlCommand          "/usr/bin/firefox %s"
+
+bind h any          scrollLeft(16)
+bind l any          scrollRight(16)
+bind k any          scrollUp(16)
+bind j any          scrollDown(16)
+bind g any          gotoPage(1)
+bind G any          gotoLastPage
+bind / any          find
+bind n any          findNext
+bind n scrLockOff   findNext
+bind n scrLockOn    findNext
+bind f any          nextPage
+bind b any          prevPage
+bind : any          focusToPageNum
+bind p any          print
+bind p scrLockOff   print
+bind p scrLockOn    print

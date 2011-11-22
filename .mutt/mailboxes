@@ -1,0 +1,15 @@
+mailboxes =inbox
+mailboxes =archive
+#mailboxes =archive/.archive.2010
+mailboxes =log
+mailboxes =postponed
+mailboxes =receipts
+mailboxes =search
+mailboxes =spam
+mailboxes =ml-rss/arch
+mailboxes =ml-rss/dwm
+mailboxes =ml-rss/hn
+mailboxes =ml-rss/input
+mailboxes =ml-rss/nba
+mailboxes =ml-rss/pg
+mailboxes =ml-rss/yt

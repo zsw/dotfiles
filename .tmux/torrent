@@ -1,0 +1,4 @@
+new-session -d -s torrent 'rtorrent'
+set-option status off
+set set-titles-string "torrent"
+attach-session -t torrent

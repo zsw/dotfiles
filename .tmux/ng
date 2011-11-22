@@ -1,0 +1,4 @@
+new-session -d -s ng 'nagcon -a -i 5 -f /var/nagios/status.dat'
+set-option status off
+set set-titles-string "ng"
+attach-session -t ng

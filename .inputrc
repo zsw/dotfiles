@@ -1,0 +1,54 @@
+set editing-mode vi
+set keymap vi-insert
+
+set completion-display-width 0
+#set completion-ignore-case on
+set completion-query-items 200
+set mark-directories on
+set mark-symlinked-directories on
+set match-hidden-files off
+set show-all-if-ambiguous on
+set visible-stats on
+
+set input-meta on
+set output-meta on
+
+
+## accessing elements of the previous command line
+## cf. man bash 2>/dev/null | less -p 'Event Designators'
+#"\e0": "!-1:0"
+#"\e1": "!-1:1"
+#"\e2": "!-1:2"
+#"\e3": "!-1:3"
+#"\e4": "!-1:4"
+#"\e5": "!-1:5"
+#"\e6": "!-1:6"
+#"\e7": "!-1:7"
+#"\e8": "!-1:8"
+#"\e9": "!-1:9"
+#"\er": "!-1:1-$"
+
+## accessing elements of the current command line typed so far
+## cf. man bash 2>/dev/null | less -p 'Event Designators'
+#"\e\e0": "!#:0"
+#"\e\e1": "!#:1"
+#"\e\e2": "!#:2"
+#"\e\e3": "!#:3"
+#"\e\e4": "!#:4"
+#"\e\e5": "!#:5"
+#"\e\e6": "!#:6"
+#"\e\e7": "!#:7"
+#"\e\e8": "!#:8"
+#"\e\e9": "!#:9"
+#"\e\er": "!#:1-$"
+#"\e\ea": "!#:1-$"
+#"\e\el": "!#:$"
+
+#bind \C-}:complete-into-braces
+\C-}:complete-into-braces
+
+$if Bash
+  Space: magic-space
+$endif
+
+

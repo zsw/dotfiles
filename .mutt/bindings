@@ -1,0 +1,51 @@
+bind index gg           first-entry
+bind index G            last-entry
+bind index k            noop
+bind index j            noop
+
+bind pager            previous-line
+bind pager gg           top
+bind pager G            bottom
+bind pager i            noop
+bind pager q            exit
+
+bind index,pager k      previous-entry
+bind index,pager j      next-entry
+bind index,pager n      next-new-then-unread
+bind index,pager <up>   previous-undeleted
+bind index,pager <down> next-undeleted
+bind index,pager R      group-reply
+bind index,pager B      bounce-message
+bind index,pager \Cb    previous-page
+bind index,pager \Cf    next-page
+bind index,pager \#     noop
+bind index,pager a      noop
+
+# Sidebar bindings...
+bind index,pager K      sidebar-prev
+bind index,pager J      sidebar-next
+bind index,pager "\\"   sidebar-open
+bind index,pager <tab>  next-unread-mailbox
+macro index,pager B     ':toggle sidebar_visible^M'
+
+## Macros
+
+# add "From" sender to google contacts
+macro index,pager A '\
+    <enter-command>set my_wait_key=$wait_key<enter>\
+    <enter-command>set wait_key<enter>\
+    <pipe-message>$HOME/bin/gcontacts.py -v -c -<return>\
+    <enter-command>set wait_key=$my_wait_key<enter>'
+
+macro generic,index,pager Z "<sync-mailbox><shell-escape>echo 0 >/srv/http/nginx/E.html<enter>" "sync mailbox and update counter"
+macro generic,index,pager E "<shell-escape>vim '-c sort! /\^https/' + $HOME/doc/af<enter>" "unread archlinux forum post titles"
+
+macro attach l          "<pipe-entry>less\n"                "View attachment using less"
+macro attach s          "<save-entry><bol>$HOME/tmp/<eol>"  "Set default save directory for attachments"
+macro generic <F1>      "<shell-escape>w3m http://www.mutt.org/doc/manual/index.html\n" "view help with w3m"
+macro index,pager \Cr   "<tag-prefix><clear-flag>N"         "mark tagged messages as read"
+macro index,pager I     "<change-folder>!<enter>"           "go to inbox"
+macro index,pager P     "<pipe-message>cat > $HOME/tmp"     "save a copy in..."
+#macro index z           "<save-message>+GMail/spam<enter>"  "mark message as spam"
+
+# vim: ft=muttrc

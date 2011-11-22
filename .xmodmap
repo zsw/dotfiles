@@ -1,0 +1,9 @@
+!! Swap Mod1 (alt) and Mod4 (super)
+keycode 115 = Alt_L
+keycode 117 = Alt_R
+keycode 64 = Super_L
+keycode 113 = Super_R
+clear Mod1
+clear Mod4
+add Mod1 = Alt_L Alt_R
+add Mod4 = Super_L Super_R
