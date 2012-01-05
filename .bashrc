@@ -1,6 +1,6 @@
 [[ ! $PS1 ]] && return             ## If non-interactive, exit
 
-eval "$(dircolors -b $HOME/.dir_colors)"    ## colourize ls
+eval "$(dircolors -b $HOME/.config/dircolours)"     ## colourize ls
 
 PATH="$HOME/bin:${PATH}"
 
@@ -26,6 +26,7 @@ export PAGER=vimpager
 export MOZ_DISABLE_PANGO=1
 export PYTHONPATH=$HOME/bin
 export SCREEN_LOCK_WAIT_TIME=300
+export SSH_AUTH_SOCK=$HOME/.tmux/ssh-auth-sock
 export USERNAME=steve
 export VISUAL=vim
 export XDG_CONFIG_HOME=$HOME/.config
@@ -66,8 +67,8 @@ export CYANBG='\e[46m'          ## Cyan
 export LIGHTGREYBG='\e[47m'     ## White
 
 export COLOUROFF='\e[0m'        ## Text Reset
-export BOLD="$(tput bold)"
-export REVERSE="$(tput rev)"
+export BOLD='\e[1m'
+export REVERSE='\e[7m'          ## Reverse Colours
 
 export PROMPT_COMMAND='(( $? == 0 )) && echo -en $LIGHTGREY || echo -en $RED'
 PS1="\h:\w/\[\e[0m\] "
