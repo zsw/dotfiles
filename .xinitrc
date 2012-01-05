@@ -21,15 +21,25 @@ export USERNAME=steve
 
 while sinac -w 300; do slock; done &    ## screen lock
 
-urxvtc -title dtsteve -e sh -c "$HOME/bin/go dtsteve && /bin/bash"
+urxvtc -title dtsteve -e sh -c "$HOME/bin/go dtsteve"
+urxvtc -title donkey -e sh -c "$HOME/bin/go donkey"
+urxvtc -title mail -e sh -c "$HOME/bin/go mail"
+urxvtc -title im -e sh -c "$HOME/bin/go im"
+urxvtc -title torrent -e sh -c "$HOME/bin/go torrent"
+
 /etc/rc.d/incrond restart &
 $HOME/bin/dwmbar.sh -l &
 
 while sleep 60; do
-    date '+%a %d %b %R' --date="30 seconds" > /srv/http/nginx/D.html
+    date '+%a %d%^b %R' --date="30 seconds" > /srv/http/nginx/D.html
 done &
 
 while true; do
     xsetroot -name "$(cat $HOME/.config/dwm_fifo)"
-    dwm &>> /var/log/dwm.log
+done &
+
+echo "$LANG" > /root/foo
+
+while true; do
+    LANG=en_CA.UTF-8 dwm &>> /var/log/dwm.log
 done
