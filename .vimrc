@@ -5,6 +5,7 @@
 "#######################
 
 source $HOME/.vim/functions/our_functions.vim " Activate functions
+call pathogen#infect()
 
 set nocompatible                        " Use vim settings vs vi settings
 
@@ -205,6 +206,12 @@ map! <Leader>q  <ESC>gqapi|                             " Reformat current parag
 " Popup menu key bindings
 inoremap <silent>j <C-R>=PopupMenuControl('j')<CR>
 inoremap <silent>k <C-R>=PopupMenuControl('k')<CR>
+
+" normal tab behavior if no snippet is matched
+if !exists("g:snipMate")
+  let g:snipMate = {}
+endif
+let g:snipMate['no_match_completion_feedkeys_chars'] = "\<tab>"
 
 
 "http://dominique.pelle.free.fr/.vimrc.html
