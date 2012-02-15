@@ -5,7 +5,6 @@
 "#######################
 
 source $HOME/.vim/functions/our_functions.vim " Activate functions
-call pathogen#infect()
 
 set nocompatible                        " Use vim settings vs vi settings
 
@@ -71,6 +70,7 @@ set ignorecase
 set smartcase
 
 
+
 "##### Autocmd #####
 "#
 "# Autocmd settings.
@@ -83,14 +83,16 @@ autocmd!
 " Close the quickfix window if it is the last
 autocmd BufEnter * call MyLastWindow()
 
-autocmd BufRead /tmp/dm_steve/*         set ft=our_doc spell
-autocmd BufRead $HOME/doc/*             set ft=our_doc
-autocmd BufRead $HOME/doc/sp            set ft=our_doc syntax=
-autocmd BufRead /var/git/dm/steve/archive/*/notes   set ft=our_doc
+autocmd BufRead /tmp/dm_steve/*         set ft=dm spell
+autocmd BufRead /tmp/dm_test/*          set ft=dm spell
+autocmd BufRead $HOME/doc/*             set ft=dm
+autocmd BufRead $HOME/doc/sp            set ft=dm syntax=
+autocmd BufRead /var/git/dm/steve/archive/*/notes   set ft=dm
 autocmd BufRead *.md                    set ft=markdown spell
 
 " Backup file prior to write with git
-"autocmd BufWritePre * silent ! $HOME/bin/vim_git_backup.sh "%:p" /var/git/vim
+autocmd BufWritePre  * silent ! $HOME/bin/vim_git_backup.sh "%:p" $HOME/.vim/backup
+autocmd BufWritePost * silent ! $HOME/bin/vim_git_backup.sh "%:p" $HOME/.vim/backup
 
 autocmd BufWrite * call ConvertTabToSpace()
 autocmd BufWrite * call RemoveTrailingWhitespace()
@@ -191,7 +193,7 @@ vnoremap <silent> _t :!perltidy -q<Enter>|              " Run perltidy on select
 
 inoremap <Leader>p <ESC>u:set paste<CR>.:set nopaste<CR>gi| " Undo paste with messed indents and repeat with paste set properly.
 
-map Q       :q!<CR>|                                    " Do not use Q for Ex mode
+map Q       :q!|                                        " Do not use Q for Ex mode
 map Y       y$|                                         " Yank from cursor to EOL
 map <C-j>   gjzz|                                       " Scroll down
 map <C-k>   gkzz|                                       " Scroll up
@@ -213,6 +215,9 @@ if !exists("g:snipMate")
 endif
 let g:snipMate['no_match_completion_feedkeys_chars'] = "\<tab>"
 
+call pathogen#infect()
 
-"http://dominique.pelle.free.fr/.vimrc.html
-"http://pbrisbin.com:8080/dotfiles/vimrc
+function Sprunge() range
+  echo system('echo '.shellescape(join(getline(a:firstline, a:lastline), "\r")).'| curl -sF "sprunge=<-" http://sprunge.us | tr -d "\n" | xclip')
+endfunction
+com -range=% -nargs=0 Sprunge :<line1>,<line2>call Sprunge()
