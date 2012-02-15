@@ -96,7 +96,7 @@ bmark -keyword=pys -title='Stack Overflow Python' http://www.google.ca/search?hl
 bmark -keyword=radar -title='Intellicast' http://www.intellicast.com/National/Radar/Current.aspx?animate=true
 bmark -keyword=regexp -title='Regular Expressions' http://www.zytrax.com/tech/web/regex.htm#special
 bmark -keyword=scrape -title='scrapetorrent' http://scrapetorrent.com/Search/index.php?search=%s
-bmark -keyword=stream -title='streams' http://www.firstrowsports.tv/sport/ice-hockey.html
+bmark -keyword=stream -title='streams' http://www.firstrowsports.eu/sport/ice-hockey.html
 bmark -keyword=tsn -title='TSN' http://tsn.ca/
 bmark -keyword=urxvt -title='http://search.gmane.org/search.php?group=gmane.comp.terminal-emulators.rxvt-unicode.general&amp;amp;query=%s' http://search.gmane.org/search.php?group=gmane.comp.terminal-emulators.rxvt-unicode.general&query=%s
 bmark -keyword=vimb -title='vim book' http://www.truth.sk/vim/vimbook-OPL.pdf
