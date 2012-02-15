@@ -34,7 +34,8 @@
 *color13:#C18FCB
 
 ! Cyan           6 0;36m ??
-*color6: #004586
+!*color6: #004586
+*color6: #005577
 ! Light Cyan    14 1;36m 107,193,208
 *color14:#6BC1D0
 
