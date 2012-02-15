@@ -1,88 +1,9 @@
 [[ ! $PS1 ]] && return             ## If non-interactive, exit
-
-eval "$(dircolors -b $HOME/.config/dircolours)"     ## colourize ls
-
-PATH="$HOME/bin:${PATH}"
-
-## exports
-export BROWSER=firefox
-export DISPLAY=:0
-export EDITOR=vim
-export GREP_COLOR='1;32'
-export GREP_OPTIONS='--color=auto'
-export HISTCONTROL=ignoredups       ## ignore duplicates in bash history
-export HISTFILESIZE=99999           ## bash history will save N commands
-export HISTIGNORE="&:[bf]g:exit"    ## commands to ignore in bash history
-export HISTSIZE=99999               ## bash will remember N commands
-export IGNOREEOF=3                  ## ctrl-d shouldn't log out
-export LC_COLLATE=C
-export LESSHISTFILE="-"
-export MAILCAP_PATH=/etc/mailcap
-export MAILCHECK=0                  ## do not check for internal mail
-export MANPAGER=vimpager
-export MANWIDTH=80
-export OOO_FORCE_DESKTOP=gnome
-export PAGER=vimpager
-export MOZ_DISABLE_PANGO=1
-export PYTHONPATH=$HOME/bin
-export SCREEN_LOCK_WAIT_TIME=300
-export SSH_AUTH_SOCK=$HOME/.tmux/ssh-auth-sock
-export USERNAME=steve
-export VISUAL=vim
-export XDG_CONFIG_HOME=$HOME/.config
-
-## define bash colours -- https://wiki.archlinux.org/index.php/Color_Bash_Prompt#List_of_colors_for_prompt_and_Bash
-export BLACK='\e[0;30m'         ## Black
-export DARKGREY='\e[1;30m'      ## Dark Grey
-export RED='\e[0;31m'           ## Red
-export LIGHTRED='\e[1;31m'      ## Light Red
-export GREEN='\e[0;32m'         ## Green
-export LIGHTGREEN='\e[1;32m'    ## Green
-export YELLOW='\e[0;33m'        ## Yellow
-export LIGHTYELLOW='\e[1;33m'   ## Yellow
-export BLUE='\e[0;34m'          ## Blue
-export LIGHTBLUE='\e[1;34m'     ## Blue
-export MAGENTA='\e[0;35m'       ## Purple
-export LIGHTMAGENTA='\e[1;35m'  ## Purple
-export CYAN='\e[0;36m'          ## Cyan
-export LIGHTCYAN='\e[1;36m'     ## Cyan
-export LIGHTGREY='\e[0;37m'     ## White
-export WHITE='\e[1;37m'         ## White
-export BLACKUN='\e[4;30m'       ## Black - Underline
-export REDUN='\e[4;31m'         ## Red
-export GREENUN='\e[4;32m'       ## Green
-export YELLOWUN='\e[4;33m'      ## Yellow
-export BLUEUN='\e[4;34m'        ## Blue
-export PURPLEUN='\e[4;35m'      ## Purple
-export CYANUN='\e[4;36m'        ## Cyan
-export WHITEUN='\e[4;37m'       ## White
-
-export BLACKBG='\e[40m'         ## Black - Background
-export REDBG='\e[41m'           ## Red
-export GREENBG='\e[42m'         ## Green
-export BROWNBG='\e[43m'         ## Yellow
-export BLUEBG='\e[44m'          ## Blue
-export PURPLEBG='\e[45m'        ## Purple
-export CYANBG='\e[46m'          ## Cyan
-export LIGHTGREYBG='\e[47m'     ## White
-
-export COLOUROFF='\e[0m'        ## Text Reset
-export BOLD='\e[1m'
-export REVERSE='\e[7m'          ## Reverse Colours
-
-export PROMPT_COMMAND='(( $? == 0 )) && echo -en $LIGHTGREY || echo -en $RED'
-PS1="\h:\w/\[\e[0m\] "
+#export PROMPT_COMMAND='(( $? == 0 )) && echo -en $LIGHTGREY || echo -en $RED'
+#PS1="\h:\w/\[\e[0m\] "
 (( $(id -u) > 0 )) && PS1="\u@\h:\w/\[\e[0m\] "
 
-## colour for less
-export GROFF_NO_SGR=1
-export LESS_TERMCAP_mb=$'\E[01;31m'     ## begin blinking
-export LESS_TERMCAP_md=$'\E[01;31m'     ## begin bold
-export LESS_TERMCAP_me=$'\E[0m'         ## end mode
-export LESS_TERMCAP_se=$'\E[0m'         ## end standout-mode
-export LESS_TERMCAP_so=$'\E[01;44;33m'  ## begin standout-mode - info box
-export LESS_TERMCAP_ue=$'\E[0m'         ## end underline
-export LESS_TERMCAP_us=$'\E[01;32m'     ## begin underline
+eval "$(dircolors -b $HOME/.config/dircolours)"     ## colourize ls
 
 [[ -f /etc/bash_completion ]] && source /etc/bash_completion
 [[ -f $HOME/.bash_dm ]] && source $HOME/.bash_dm
@@ -107,22 +28,24 @@ shopt -s nocaseglob     ## pathname expansion will be treated as case-insensitiv
 :h() { vi -c ":silent help $@" -c "only"; }
 apache() { apachectl configtest && /etc/rc.d/httpd stop && sleep 1 && /etc/rc.d/httpd start; }
 aurget() { command aurget --asroot "$@"; }
-bin() { git --git-dir=$HOME/.config/bin.git/ --work-tree=$HOME/bin "$@"; }
+bin() { git --git-dir=/var/git/bin/ --work-tree=$HOME/bin "$@"; }
 burn() { wodim -v dev=/dev/cdrom "$@"; }
 cal() { command cal -3; }
 calc() { awk "BEGIN { printf \"%.3f\n\", $* }"; }
 cp() { command cp -prv "$@"; }
 debug() { local script="$1"; shift; bash -vx $(command -v "$script") "$@"; }   ## run a bash script in debug mode
 df() { command df -Th "$@"; }
-dotfiles() { git --git-dir=$HOME/.config/dotfiles.git/ --work-tree=$HOME "$@"; }
+dotfiles() { git --git-dir=/var/git/dotfiles/ --work-tree=$HOME "$@"; }
 du() { command du -ch --exclude=mnt "$@"; }
 du0() { du -ch --exclude=mnt --max-depth=0 "$@"; }
 du1() { du -ch --exclude=mnt --max-depth=1 "$@"; }
 ducks() { du -chs --exclude=mnt * | sort -rh | head -11; }  ## disk hog
-fm() { /usr/bin/fdm fetch && $HOME/dm/bin/process_emails.sh; }
+#fm() { /usr/bin/fdm fetch && $HOME/dm/bin/process_emails.sh; }
+fm() { /usr/bin/fdm fetch; }
+g() { read a b c < $HOME/.config/git/current; eval git --git-dir=$a --work-tree=$b "$@"; }
 gcron() { crontab -l | grep "$@"; }
 gh() { history | grep "$@"; }
-gkb() { ssh dtsteve "grep $* $HOME/dm/archive/30197/notes" | grep "$@"; }
+gkb() { ssh dtsteve "grep -i $* $HOME/dm/archive/30197/notes" | grep "$@"; }
 gn() { ssh -t dtsteve 'vim + $HOME/dm/archive/30320/notes' 2>/dev/null; }
 gps() { pgrep -lf "$@"; }                                       ## search process list
 grep() { command grep -Iis -d skip "$@"; }
@@ -167,20 +90,22 @@ sprunge() { curl -sF 'sprunge=<-' http://sprunge.us | tr -d '\n' | xclip; }
 startx() { shopt -u checkjobs; nohup ssh-agent startx &>> /var/log/X.log & exit; }
 switch() { mv $1 ${1}.tmp && mv $2 $1 && mv ${1}.tmp $2; }
 tord() { torrent_search.py -orz -g blue -k yellow -l $HOME/mnt/donkey/tmp/torrents/ "$@"; }
+tvshow() { ssh -t dtsteve 'vim + $HOME/dm/archive/30069/notes' 2>/dev/null; }
 utb() { w3m -dump http://cb.vu/unixtoolbox.xhtml |less; }
 vcron() { crontab -e; }
 vepps() { ssh -t dtsteve 'vim + $HOME/dm/archive/30201/notes'; }
 vi() { _vi "$@"; }
-vkb() { ssh -t dtsteve 'vim + $HOME/dm/archive/30197/notes' 2>/dev/null; }
+vkb() { [[ $HOSTNAME == dtsteve ]] && vim + $HOME/dm/archive/30197/notes ||
+        ssh -t dtsteve 'vim + $HOME/dm/archive/30197/notes' 2>/dev/null; }
 vpw() { vim $HOME/doc/file.asc; }
 which() { (alias; declare -f) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot $@; }
+wp() { term=$(echo "$@" | tr ' ' _); curl -Ls "http://en.wikipedia.org/w/api.php?action=query&titles=$term&prop=extlinks&format=json" | awk -F':"|"}' -v RS=, '/http/ {gsub(/\\/, "", $2); print $2}'; }   ## print reference urls from wikipedia
 xp() { echo 'WM_CLASS(STRING) = "NAME", "CLASS"'; xprop | grep "WM_WINDOW_ROLE\|WM_CLASS"; }  ## xprop CLASS and NAME
 
 
-## functions
+## FUNCTIONS
 _vi() {
     s=3
-    (( $(id -u) > 0 )) && s=4
     if [[ $TMUX ]]; then
         tmux select-window -t "$s"
         for i in "$@"; do
@@ -244,7 +169,47 @@ archivef() {
     esac
 }
 
+## dictionary
 def() { word=$(tr ' ' _ <<< "$*")
-        w3m -dump "http://www.google.ca/search?q=define%20$word" | awk '/^     1./,/^        More info >>/'
+        lynx -dump "http://www.thefreedictionary.com/p/$word" | awk -v w="$word" '$0 ~ w,/   __________/'
         mplayer "http://ssl.gstatic.com/dictionary/static/sounds/de/0/$word.mp3" &>/dev/null
 }
+
+_git_prompt() {
+    unset state branch remote repo
+    g rev-parse --git-dir &> /dev/null
+    git_status=$(g status 2> /dev/null)
+
+    branch_pattern="^# On branch ([^${IFS}]*)"
+    [[ $git_status =~ $branch_pattern ]] && branch=${BASH_REMATCH[1]}
+
+    diverge_pattern="# Your branch and (.*) have diverged"
+    [[ $git_status =~ $diverge_pattern ]] && remote=${YELLOW}↕
+
+    remote_pattern="# Your branch is (.*) of"
+    ## add an elif or two here if you want to get more specific
+    if [[ $git_status =~ $remote_pattern ]]; then
+        if [[ ${BASH_REMATCH[1]} == "ahead" ]]; then
+            remote=${LIGHTYELLOW}↑
+        else
+            remote=${LIGHTYELLOW}↓
+        fi
+    fi
+
+    [[ $git_status =~ "working directory clean" ]] || state=${LIGHTRED}⚡
+
+    repo=$(read a _ < $HOME/.config/git/current; echo "${a##*/}")
+    echo "$state$remote\[$CYAN\]$repo\[$LIGHTGREY\]|\[$CYAN\]$branch\[$COLOUROFF\]"
+}
+
+_prompt() {
+    e=$?
+    prompt=$(_git_prompt)
+    if (( $e == 0 )); then
+        PS1="$prompt\n\[$LIGHTGREY\]\h:\w/\[\e[0m\] \[$COLOUROFF\]"
+    else
+        PS1="$prompt\n\[$RED\]\h:\w/\[\e[0m\] \[$COLOUROFF\]"
+    fi
+}
+
+PROMPT_COMMAND=_prompt
