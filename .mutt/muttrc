@@ -52,16 +52,7 @@ set delete = yes
 # set dsn_return = ''
 # set duplicate_threads = yes
 set edit_headers = yes
-#set editor = "vim -c 'set ft=mail'"
-#set editor = "vim -u ~/.mutt/vimrc"
-#set editor = "vim -c 'set ft=mail' -c 'set tw=72' -c 'set spell'"
-#set editor = "vim '+1/^$' -c 'set ft=our_doc' -c 'set spell'"
-#set editor = "vim '+/^\s*\n' -c 'set ft=our_doc' -c 'set spell'"
-#set editor = "vim '+/^$' -c 'set nohlsearch' -c 'set ft=our_doc' -c 'set spell'"
-#set editor = "vim '+:8' -c 'set ft=our_doc' -c 'set spell' -c 'set tw=72'"
-set editor="vim +':set ft=our_doc' +':set spell' +':set tw=72' +\`awk '/^$/ {print i+1; exit} {i++}' %s\` %s"
-# ft=our_doc.vim'"
-# ft=mail'
+set editor="vim +$(awk '/^$/ {print i+1; exit} {i++}' %s\) %s"
 # set encode_from = no
 # set entropy_file = ''
 # set envelope_from_address = ''
